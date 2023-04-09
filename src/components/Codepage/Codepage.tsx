@@ -94,9 +94,13 @@ const Codepage = () => {
   }, []);
 
   return (
-    <Box sx={{ backgroundImage: "url('/assets/bg/bg.png')",
-  backgroundSize: "cover",
-  backgroundPosition: "center", }}>
+    <Box
+      sx={{
+        backgroundImage: "url('/assets/bg/bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <style>
         {`
           .CodeMirror {
@@ -105,42 +109,43 @@ const Codepage = () => {
         `}
       </style>
       <Box
-          onClick={() => {
-            navigate("/");
-          }}
-          sx={{
-
-            width: "40px",
-            display: "flex",
-            justifyContent: "center",
-            fontSize: "8px",
-            fontWeight: "bold",
-            letterSpacing: "0.5px",
-            color: "white",
-            bgcolor: "rgb(151, 151, 151)",
-            py: 1,
-            px: 2,
-position:"absolute",
-left:"5px",
-top:"5px",
-            borderRadius: "10px",
-            ":hover": { cursor: "pointer" },
-            ":active": { transition: "0.2s", scale: "0.95" },
-          }}>
-{"<< BACK"}
-        </Box>
+        onClick={() => {
+          navigate("/");
+        }}
+        sx={{
+          width: "40px",
+          display: "flex",
+          justifyContent: "center",
+          fontSize: "8px",
+          fontWeight: "bold",
+          letterSpacing: "0.5px",
+          color: "white",
+          bgcolor: "rgb(151, 151, 151)",
+          py: 1,
+          px: 2,
+          position: "absolute",
+          left: "5px",
+          top: "5px",
+          borderRadius: "10px",
+          ":hover": { cursor: "pointer" },
+          ":active": { transition: "0.2s", scale: "0.95" },
+        }}
+      >
+        {"<< BACK"}
+      </Box>
       <Container
-   sx={{
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    minHeight: "100vh",
-    py: 1,
-    gap: "40px",
-    backgroundImage: "url('/assets/bg/bg.png')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}>
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          minHeight: "100vh",
+          py: 1,
+          gap: "40px",
+          backgroundImage: "url('/assets/bg/bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <Box
           onClick={() => {
             navigate("/");
@@ -148,7 +153,8 @@ top:"5px",
           sx={{
             borderRadius: "20px",
             ":hover": { cursor: "pointer" },
-          }}>
+          }}
+        >
           <img
             style={{ height: "auto", width: "250px" }}
             src="/assets/logo/logo.png"
@@ -160,7 +166,8 @@ top:"5px",
             fontWeight: "bold",
             letterSpacing: "0.5px",
             color: "rgb(236, 172, 172)",
-          }}>
+          }}
+        >
           {roomName.toUpperCase()}
         </Box>
         <Box
@@ -170,14 +177,16 @@ top:"5px",
             height: "fit-content",
             display: "flex",
             flexDirection: "column",
-          }}>
+          }}
+        >
           <Box
             sx={{
               height: "50px",
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-            }}>
+            }}
+          >
             <Box sx={{ display: "flex", alignItems: "baseline", gap: "10px" }}>
               <Typography variant="h5" sx={{ fontWeight: "bold" }}>
                 {readOnly ? "Mentor" : "Student"}
@@ -192,7 +201,8 @@ top:"5px",
                     py: "2px",
                     px: 1,
                     borderRadius: "5px",
-                  }}>
+                  }}
+                >
                   Read Only
                 </Box>
               ) : (
@@ -219,7 +229,8 @@ top:"5px",
                 borderRadius: "10px",
                 ":hover": { cursor: "pointer" },
                 ":active": { transition: "0.2s", scale: "0.95" },
-              }}>
+              }}
+            >
               {isSaved ? "Saved" : "Save to database"}
             </Box>
           </Box>
@@ -230,7 +241,8 @@ top:"5px",
               overflow: "auto",
               width: "auto",
               height: "fit-content",
-            }}>
+            }}
+          >
             <CodeMirror
               value={code}
               options={{

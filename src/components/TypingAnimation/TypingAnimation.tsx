@@ -6,7 +6,11 @@ interface IProps {
   wordDelay?: number;
 }
 
-const TypingAnimation = ({ words, letterDelay = 100, wordDelay = 8000 }: IProps) => {
+const TypingAnimation = ({
+  words,
+  letterDelay = 100,
+  wordDelay = 8000,
+}: IProps) => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentWord, setCurrentWord] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -45,8 +49,7 @@ const TypingAnimation = ({ words, letterDelay = 100, wordDelay = 8000 }: IProps)
     return () => clearInterval(interval);
   }, [currentWordIndex, isDeleting, words, letterDelay, wordDelay]);
 
-  return <span style={{color:"rgb(255, 159, 159)"}}>{currentWord}.</span>;
+  return <span style={{ color: "rgb(255, 159, 159)" }}>{currentWord}.</span>;
 };
 
 export default TypingAnimation;
-
