@@ -34,7 +34,8 @@ const Homepage: React.FC = () => {
     setIsLoading(true);
     try {
       const response = await axios.get(
-        "http://localhost:8000/api/",
+        // "http://localhost:8000/api/",
+        "https://mhomeassigment-back.onrender.com/api/",
         {
           headers: {
             "Content-Type": "application/json",
