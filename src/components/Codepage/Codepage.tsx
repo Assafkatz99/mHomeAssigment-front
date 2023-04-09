@@ -94,7 +94,9 @@ const Codepage = () => {
   }, []);
 
   return (
-    <>
+    <Box sx={{ backgroundImage: "url('/assets/bg/bg.png')",
+  backgroundSize: "cover",
+  backgroundPosition: "center", }}>
       <style>
         {`
           .CodeMirror {
@@ -243,7 +245,7 @@ top:"5px",
           </Box>
         </Box>
       </Container>
-    </>
+    </Box>
   );
 };
 

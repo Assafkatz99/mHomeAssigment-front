@@ -15,7 +15,7 @@ const paper_sx = {
   fontWeight:"bold",
   color:"white",
   bgcolor:"rgb(236, 172, 172)",
-  fontSize:"40px",
+  fontSize:"35px",
 
   ":hover":{cursor:"pointer", transition:"0.2s", scale:"1.01"}
 }
@@ -56,10 +56,10 @@ const Homepage: React.FC = () => {
     fetchApiData();
   }, []);
 
-  return (
-    <Container sx={{ display: "flex", flexDirection: "column", alignItems: "center", minHeight: "100vh", py: 3, gap: "70px", backgroundImage: "url('/assets/bg/bg.png')",
-    backgroundSize: "cover",
-    backgroundPosition: "center", }}>
+  return (<Box sx={{ backgroundImage: "url('/assets/bg/bg.png')",
+  backgroundSize: "cover",
+  backgroundPosition: "center", }}>
+    <Container sx={{ display: "flex", flexDirection: "column", alignItems: "center", minHeight: "100vh", py: 3, gap: "70px" }}>
       {isLoading && <div>Loading...</div>}
 
       <Box sx={{ borderRadius: "20px" }}><img style={{height: "auto", width: "400px"}} src="/assets/logo/logo.png"/></Box>
@@ -84,7 +84,7 @@ const Homepage: React.FC = () => {
 
 
       </Box>
-    </Container>
+    </Container></Box>
   );
 };
 
