@@ -14,6 +14,7 @@ const Codepage = () => {
   const [roomName, setRoomName] = useState("");
   const [isSaved, setIsSaved] = useState(false);
 
+  // pressing on the Save button action - save to code to the server
   const handleUpdateCodeToServer = async (roomId: number, roomCode: string) => {
     try {
       const response = await axios.post(
@@ -34,7 +35,7 @@ const Codepage = () => {
       setIsSaved(false);
     }, 3000);
   };
-
+// providing the name of the room to the CodePage component
   useEffect(() => {
     const stringData = sessionStorage.getItem("roomsData");
     if (stringData !== null) {
@@ -68,6 +69,8 @@ const Codepage = () => {
       socket.off("readOnly");
     };
   }, [socket]);
+
+// dealing with fast typing or deleting
 
   let lastEmitTime = 0;
   const emitDelay = 500;
