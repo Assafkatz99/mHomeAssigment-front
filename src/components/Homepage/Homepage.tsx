@@ -64,7 +64,7 @@ const Homepage: React.FC = () => {
       {isLoading && <div>Loading...</div>}
 
       <Box sx={{ borderRadius: "20px" }}><img style={{height: "auto", width: "400px"}} src="/assets/logo/logo.png"/></Box>
-      <Box sx={{fontWeight:"bold", color:"rgb(114, 113, 113)", height: "70px", width: "400px",display:"center", justifyContent:"center", textAlign:"center",fontSize:"20px" }}> Meet E'FTA ROOMS, your new and best way to       <TypingAnimation words={["CREATE", "COLLABORATE","LEARN",  "SHARE", "TEACH",  "DREAM",  "ACHIEVE"]}  />
+      <Box sx={{fontWeight:"bold", color:"rgb(114, 113, 113)", height: "70px", width: "400px",display:"center", justifyContent:"center", textAlign:"center",fontSize:"20px" }}> Meet E'FTA ROOMS, your new and revolutionary way to       <TypingAnimation words={["CREATE", "COLLABORATE","LEARN",  "SHARE", "TEACH",  "DREAM",  "ACHIEVE"]}  />
 </Box>
 
       <Box sx={{ height: "fit-content", width: "100%", display: "flex", justifyContent: "space-around", flexWrap: "wrap", gap: "20px 0px", position: "relative" }}>
