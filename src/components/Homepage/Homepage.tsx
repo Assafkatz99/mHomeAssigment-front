@@ -32,7 +32,8 @@ const Homepage: React.FC = () => {
   const fetchApiData = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get("http://localhost:8000/api/", {
+      // const response = await axios.get("http://localhost:8000/api/", {
+      const response = await axios.get("https://mhomeassigment-back.onrender.com/api/", {
         headers: {
           "Content-Type": "application/json",
         },

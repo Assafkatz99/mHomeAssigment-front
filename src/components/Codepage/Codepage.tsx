@@ -17,7 +17,8 @@ const Codepage = () => {
   const handleUpdateCodeToServer = async (roomId: number, roomCode: string) => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/updateRoom/",
+        // "http://localhost:8000/api/updateRoom/",
+        "https://mhomeassigment-back.onrender.com/api/updateRoom/",
         { roomId: roomId, roomCode: roomCode },
         {
           headers: {
@@ -44,7 +45,8 @@ const Codepage = () => {
   }, [roomId]);
 
   const socket = useMemo(
-    () => io("http://localhost:8000/", { query: { roomId: roomId } }),
+    // () => io("http://localhost:8000/", { query: { roomId: roomId } }),
+    () => io("https://mhomeassigment-back.onrender.com/", { query: { roomId: roomId } }),
     [roomId]
   );
 
